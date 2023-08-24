@@ -1,0 +1,152 @@
+/* app/styles/todo.css */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px #0003;
+  z-index: 1000;
+}
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.in-progress {
+  background-color: #f5f5f5;
+}
+.completed {
+  background-color: #90ee90d8;
+  color: #fff;
+}
+.on-hold {
+  background-color: #ffa6009f;
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+}
+.favorite-icon {
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+.favorite-icon.active {
+  transform: scale(1.2);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+h1 {
+  font-size: 45px;
+  font-family: Arial, sans-serif;
+}
+.button-container {
+  display: flex;
+  justify-content: initial;
+  margin-bottom: 20px;
+}
+#addtodo {
+  margin-right: 5px;
+}
+.button1 {
+  background-color: #08678d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  transition: background-color .3s ease, transform .3s ease;
+}
+.button1:hover {
+  background-color: #1e90ff;
+  transform: scale(1.05);
+}
+.button1 + .button1 {
+  margin-left: 10px;
+}
+.input-field,
+.textarea-field,
+.select-field {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.button {
+  background-color: #00f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .3s ease, transform .3s ease;
+}
+.button:hover {
+  background-color: #1e90ff;
+  transform: scale(1.05);
+}
+.button-cancel {
+  background-color: red;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
+  .button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 40%;
+}
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0;
+}
+.search-button {
+  padding: 8px 16px;
+  background-color: #87cefa;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-input {
+    width: 30%;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}

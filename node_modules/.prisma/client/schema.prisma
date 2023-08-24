@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  email        String   @unique
+  passwordHash String
+  todos        Todo[]
+}
+
+model Todo {
+  id            String    @id @default(uuid())
+  title         String
+  description   String
+  status        String    @default("in-progress")
+  todosId       String
+  todos         User      @relation(fields: [todosId], references: [id], onDelete: Cascade)
+
+  categoryId    String?
+  category      Category? @relation(fields: [categoryId], references: [id])
+
+  subtask       Subtask[]
+}
+
+model Category {
+  id            String   @id @default(uuid())
+  category      String
+  todos         Todo[]
+}
+
+model Subtask {
+  id          String @id @default(uuid())
+  title       String
+  status      String @default("in-progress")
+  todoId      String
+  todo        Todo   @relation(fields: [todoId], references: [id])
+}
+
+
+
+
+
+

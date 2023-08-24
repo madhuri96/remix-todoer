@@ -1,0 +1,192 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .in-progress {
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .completed {
+    background-color: rgba(144, 238, 144, 0.849);
+    color: white;
+  }
+  
+  .on-hold {
+    background-color: rgba(255, 166, 0, 0.623);
+    color: white;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .favorite-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .favorite-icon.active {
+    transform: scale(1.2);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+
+  h1{
+    font-size: 45px;
+    font-family: Arial, sans-serif;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: initial;
+    margin-bottom: 20px; 
+  }
+
+  #addtodo{
+    margin-right: 5px;
+  }
+  
+  .button1 {
+    background-color: rgb(8, 103, 141); /* Set button background color */
+    color: white; /* Set button text color */
+    border: none;
+    padding: 10px 20px; /* Set button padding */
+    border-radius: 5px; /* Add button border radius */
+    cursor: pointer;
+    height: 40px; /* Set button height */
+    width: 150px; /* Set button width */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transitions */
+  }
+  
+  .button1:hover {
+    background-color: dodgerblue; /* Change background color on hover */
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+  }
+  
+  /* Additional styling for space between buttons */
+  .button1 + .button1 {
+    margin-left: 10px; /* Add margin between buttons */
+  }
+
+  /* Style for input, textarea, and select fields */
+.input-field,
+.textarea-field,
+.select-field {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for buttons */
+.button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: dodgerblue;
+  transform: scale(1.05);
+}
+
+/* Style for the "Cancel" button */
+.button-cancel {
+  background-color: red;
+}
+
+/* Style for the button group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+/* Add these styles to your CSS */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 40%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0;
+}
+
+.search-button {
+  padding: 8px 16px;
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Optional: Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-input {
+    width: 30%;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+  
